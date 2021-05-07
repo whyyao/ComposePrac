@@ -11,8 +11,12 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.example.composeprac.ui.theme.ComposePracTheme
 
 class MainActivity : ComponentActivity() {
+
+    private val viewModel = MainViewModel()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        viewModel.getData()
         setContent {
             ComposePracTheme {
                 // A surface container using the 'background' color from the theme

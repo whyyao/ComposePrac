@@ -7,5 +7,5 @@ import retrofit2.http.Query
 
 interface CardsApi {
     @GET("cards")
-    fun getAllCards(@Query("name") name: String?): Call<CardCollection>
+    fun getAllCards(@Query("name") name: String? = null): Call<CardCollection>
 }
